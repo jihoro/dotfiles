@@ -303,11 +303,11 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.33725491166114807</real>
+		<real>0.0</real>
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.90588235855102539</real>
+		<real>1</real>
 		<key>Red Component</key>
 		<real>0.0</real>
 	</dict>
@@ -316,11 +316,11 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.33725490196078434</real>
+		<real>0.0</real>
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.90588235294117647</real>
+		<real>1</real>
 		<key>Red Component</key>
 		<real>0.0</real>
 	</dict>
@@ -675,26 +675,26 @@
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.33725491166114807</real>
+		<real>0.14117647707462311</real>
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.90588235855102539</real>
+		<real>0.94117647409439087</real>
 		<key>Red Component</key>
-		<real>0.0</real>
+		<real>1</real>
 	</dict>
 	<key>Bold Color (Dark)</key>
 	<dict>
 		<key>Alpha Component</key>
 		<real>1</real>
 		<key>Blue Component</key>
-		<real>0.33725490196078434</real>
+		<real>0.14117647058823529</real>
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.90588235294117647</real>
+		<real>0.94117647058823528</real>
 		<key>Red Component</key>
-		<real>0.0</real>
+		<real>1</real>
 	</dict>
 	<key>Bold Color (Light)</key>
 	<dict>
@@ -716,9 +716,9 @@
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.93333333730697632</real>
+		<real>1</real>
 		<key>Red Component</key>
-		<real>0.35686275362968445</real>
+		<real>0.0</real>
 	</dict>
 	<key>Cursor Color (Dark)</key>
 	<dict>
@@ -729,9 +729,9 @@
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.93333333333333335</real>
+		<real>1</real>
 		<key>Red Component</key>
-		<real>0.35686274509803922</real>
+		<real>0.0</real>
 	</dict>
 	<key>Cursor Color (Light)</key>
 	<dict>
@@ -829,9 +829,9 @@
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.93333333730697632</real>
+		<real>1</real>
 		<key>Red Component</key>
-		<real>0.35686275362968445</real>
+		<real>0.0</real>
 	</dict>
 	<key>Foreground Color (Dark)</key>
 	<dict>
@@ -842,9 +842,9 @@
 		<key>Color Space</key>
 		<string>P3</string>
 		<key>Green Component</key>
-		<real>0.93333333333333335</real>
+		<real>1</real>
 		<key>Red Component</key>
-		<real>0.35686274509803922</real>
+		<real>0.0</real>
 	</dict>
 	<key>Foreground Color (Light)</key>
 	<dict>
