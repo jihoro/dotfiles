@@ -11,5 +11,5 @@ alias kgp="kubectl get pods"
 alias kgs="kubectl get svc"
 alias kgd="kubectl get deployment"
 export PATH=$PATH:$HOME/go/bin:$HOME/Downloads/nvim-macos-arm64/bin
-#set -o vi
+set -o vi
 source <(fzf --zsh)
