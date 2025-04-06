@@ -1,3 +1,4 @@
+-- open app shortcuts
 shortcuts = {
     {"B", "Brave Browser"},
     {"T", "iTerm"},
@@ -10,6 +11,9 @@ for i,shortcut in ipairs(shortcuts) do
         hs.application.launchOrFocus(shortcut[2])
     end)
 end
+
+-- move windows shortcuts
+hs.window.animationDuration = 0
 
 local function moveWindow(xFactor, yFactor, wFactor, hFactor)
   return function()
