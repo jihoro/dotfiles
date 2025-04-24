@@ -2,6 +2,10 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat you-should-use)
 #ZSH_TMUX_AUTOSTART=true
 #ZSH_TMUX_DEFAULT_SESSION_NAME=default
 
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+zstyle ':prompt:pure:git:branch' color '#7390aa'
+prompt pure
 
 alias k="kubectl"
 alias kx="kubie ctx"
