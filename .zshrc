@@ -16,6 +16,7 @@ alias kgs="kubectl get svc"
 alias kgd="kubectl get deployment"
 alias vi="nvim"
 alias notes="cd ~/notes;vi"
+alias tl="tmux ls"
 export PATH=$PATH:$HOME/go/bin:$HOME/Downloads/nvim-macos-arm64/bin
 
 source <(fzf --zsh)
