@@ -1,4 +1,4 @@
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat you-should-use)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat you-should-use tmux)
 #ZSH_TMUX_AUTOSTART=true
 #ZSH_TMUX_DEFAULT_SESSION_NAME=default
 
@@ -16,7 +16,6 @@ alias kgs="kubectl get svc"
 alias kgd="kubectl get deployment"
 alias vi="nvim"
 alias notes="cd ~/notes;vi"
-alias tl="tmux ls"
 export PATH=$PATH:$HOME/go/bin:$HOME/Downloads/nvim-macos-arm64/bin
 
 source <(fzf --zsh)
