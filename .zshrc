@@ -9,7 +9,6 @@ prompt pure
 
 alias k="kubectl"
 alias kx="kubie ctx"
-alias kxc="kubie ctx cfctl-pdx-c"
 alias kn="kubie ns"
 alias kgp="kubectl get pods"
 alias kgs="kubectl get svc"
