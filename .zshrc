@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat you-should-use tmux)
 #ZSH_TMUX_AUTOSTART=true
 #ZSH_TMUX_DEFAULT_SESSION_NAME=default
@@ -17,7 +18,9 @@ alias vi="nvim"
 alias notes="cd ~/notes;vi"
 export PATH=$PATH:$HOME/go/bin:$HOME/Downloads/nvim-macos-arm64/bin
 
-source <(fzf --zsh)
+bindkey -v
+FZF_CTRL_T_COMMAND= source <(fzf --zsh)
+bindkey -M vicmd "^V" edit-command-line
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -28,3 +31,4 @@ function y() {
 }
 eval "$(zoxide init --cmd cd zsh)"
 
+# zprof

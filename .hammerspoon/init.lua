@@ -1,10 +1,10 @@
 -- open app shortcuts
 shortcuts = {
-    { "L", "Brave Browser" },
+    { "W", "Brave Browser" },
     { "I", "iTerm" },
-    -- {"C", "Google Chat"},
+    { "C", "Google Chat" },
     { "M", "Notes" },
-    { "W", "Windsurf" },
+    { "E", "Windsurf" },
 }
 
 for i, shortcut in ipairs(shortcuts) do
@@ -13,25 +13,25 @@ for i, shortcut in ipairs(shortcuts) do
     end)
 end
 
-hs.hotkey.bind({ "alt" }, "C", function()
-    hs.osascript.javascript([[
-    (function() {
-      var brave = Application('Brave Browser');
-      brave.activate();
-
-      for (var win of brave.windows()) {
-        var tabs = win.tabs();
-        for (var i = 0; i < tabs.length; i++) {
-          if (tabs[i].url().includes("mail.google.com/chat")) {
-            win.activeTabIndex = (i + 1);
-            win.index = 1;
-            return; // stop once we find it
-          }
-        }
-      }
-    })();
-  ]])
-end)
+-- hs.hotkey.bind({ "alt" }, "C", function()
+--     hs.osascript.javascript([[
+--     (function() {
+--       var brave = Application('Brave Browser');
+--       brave.activate();
+--
+--       for (var win of brave.windows()) {
+--         var tabs = win.tabs();
+--         for (var i = 0; i < tabs.length; i++) {
+--           if (tabs[i].url().includes("mail.google.com/chat")) {
+--             win.activeTabIndex = (i + 1);
+--             win.index = 1;
+--             return; // stop once we find it
+--           }
+--         }
+--       }
+--     })();
+--   ]])
+-- end)
 
 -- move windows shortcuts
 hs.window.animationDuration = 0
