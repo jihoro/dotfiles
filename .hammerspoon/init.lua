@@ -1,6 +1,6 @@
 -- open app shortcuts
 shortcuts = {
-    { "W", "Brave Browser" },
+    { "W", "Google Chrome" },
     { "I", "iTerm" },
     { "C", "Google Chat" },
     { "M", "Notes" },

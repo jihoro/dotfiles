@@ -1,12 +1,7 @@
 # zmodload zsh/zprof
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-bat you-should-use tmux)
+plugins=(git zsh-syntax-highlighting you-should-use tmux zsh-bat zsh-autosuggestions vi-mode)
 #ZSH_TMUX_AUTOSTART=true
 #ZSH_TMUX_DEFAULT_SESSION_NAME=default
-
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-autoload -U promptinit; promptinit
-zstyle ':prompt:pure:git:branch' color '#7390aa'
-prompt pure
 
 alias k="kubectl"
 alias kx="kubie ctx"
@@ -16,11 +11,8 @@ alias kgs="kubectl get svc"
 alias kgd="kubectl get deployment"
 alias vi="nvim"
 alias notes="cd ~/notes;vi"
-export PATH=$PATH:$HOME/go/bin:$HOME/Downloads/nvim-macos-arm64/bin
 
-bindkey -v
 FZF_CTRL_T_COMMAND= source <(fzf --zsh)
-bindkey -M vicmd "^V" edit-command-line
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
