@@ -16,35 +16,6 @@ alias gminor='gcam "minor" && git rebase -i HEAD~2'
 alias oc="opencode"
 
 export EDITOR="nvim"
-export NVM_DIR="$HOME/.nvm"
-
-nvm() {
-  unset -f nvm node npm npx
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-  nvm "$@"
-}
-
-node() {
-  unset -f nvm node npm npx
-  \. "$NVM_DIR/nvm.sh"
-  nvm use default --silent
-  node "$@"
-}
-
-npm() {
-  unset -f nvm node npm npx
-  \. "$NVM_DIR/nvm.sh"
-  nvm use default --silent
-  npm "$@"
-}
-
-npx() {
-  unset -f nvm node npm npx
-  \. "$NVM_DIR/nvm.sh"
-  nvm use default --silent
-  npx "$@"
-}
 
 FZF_ALT_C_COMMAND= FZF_CTRL_T_COMMAND= source <(fzf --zsh)
 
@@ -59,19 +30,9 @@ function y() {
 
 eval "$(zoxide init --cmd cd zsh)"
 
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$HOME/.opencode/bin:$PATH"
-
-[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 source ~/gitstatus/gitstatus.prompt.zsh
 export PATH="$HOME/.git-ai/bin:$PATH"
