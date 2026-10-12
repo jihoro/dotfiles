@@ -4,7 +4,26 @@ Terminal configuration for Zsh, tmux, Ghostty, Powerlevel10k, and Hammerspoon.
 
 ## Setup
 
-Install applications and command-line tools first. The setup script reports anything missing but only installs configuration dependencies and plugins.
+### Prerequisites
+
+Required to run setup:
+
+- macOS
+- Git
+- Internet access to GitHub
+
+Install these applications and command-line tools separately:
+
+- Ghostty
+- Hammerspoon
+- JetBrains Mono NL font
+- `fzf`, `yazi`, `zoxide`, `nvim`, `bat`, `tmux`, and `opencode`
+
+Hammerspoon shortcuts also expect Google Chrome, Google Chat, and Cloudflare applications. Missing shortcut applications do not prevent setup.
+
+The script installs Oh My Zsh, Powerlevel10k, Zsh plugins, gitstatus, TPM, and configured tmux plugins.
+
+### Run
 
 ```sh
 git clone https://github.com/jihoro/dotfiles.git
@@ -22,4 +41,4 @@ Options:
 --skip-defaults   Do not prompt or apply macOS defaults
 ```
 
-The script installs Oh My Zsh, Powerlevel10k, Zsh plugins, gitstatus, TPM, and configured tmux plugins. Ghostty expects the `JetBrains Mono NL` font. Import `iterm.itermcolors` manually if using iTerm2.
+Import `iterm.itermcolors` manually if using iTerm2.
