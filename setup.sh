@@ -74,6 +74,17 @@ copy_config() {
   printf 'Installed: ~/%s\n' "$relative_path"
 }
 
+copy_config_tree() {
+  local relative_dir="$1"
+  local source_path
+  local relative_path
+
+  while IFS= read -r -d '' source_path; do
+    relative_path="${source_path#"$repo_dir/"}"
+    copy_config "$relative_path"
+  done < <(find "$repo_dir/$relative_dir" -type f -print0)
+}
+
 clone_if_missing() {
   local url="$1"
   local destination="$2"
@@ -98,6 +109,7 @@ copy_config ".tmux.conf"
 copy_config ".hammerspoon/init.lua"
 copy_config ".config/ghostty/config"
 copy_config ".config/ghostty/themes/orng-dark"
+copy_config_tree ".config/nvim"
 
 if [[ "$install_plugins" == true ]]; then
   clone_if_missing "https://github.com/ohmyzsh/ohmyzsh.git" "$HOME/.oh-my-zsh"
@@ -115,7 +127,7 @@ if [[ "$install_plugins" == true ]]; then
 fi
 
 missing_commands=()
-for command_name in fzf yazi zoxide nvim bat tmux opencode; do
+for command_name in fzf yazi zoxide nvim bat tmux opencode rg make; do
   if ! command -v "$command_name" >/dev/null 2>&1; then
     missing_commands+=("$command_name")
   fi
@@ -123,6 +135,16 @@ done
 
 if ((${#missing_commands[@]})); then
   printf 'Missing applications: %s\n' "${missing_commands[*]}" >&2
+fi
+
+if command -v nvim >/dev/null 2>&1; then
+  nvim_version="$(nvim --version)"
+  nvim_version="${nvim_version%%$'\n'*}"
+  nvim_version="${nvim_version#NVIM v}"
+  if [[ "$nvim_version" =~ ^([0-9]+)\.([0-9]+) ]] &&
+    ((BASH_REMATCH[1] == 0 && BASH_REMATCH[2] < 11)); then
+    printf 'Neovim 0.11 or newer is required; found %s.\n' "$nvim_version" >&2
+  fi
 fi
 
 for app_name in Ghostty Hammerspoon; do
