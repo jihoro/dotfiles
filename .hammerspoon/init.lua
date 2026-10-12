@@ -2,9 +2,11 @@
 shortcuts = {
     { "W", "Google Chrome" },
     { "I", "Ghostty" },
-    { "C", "Google Chat" },
+    { "C", "Google Chat 1" },
     { "M", "Notes" },
-    { "E", "Windsurf" },
+    { "D", "Cloudflare" },
+
+    -- { "E", "Windsurf" },
 }
 
 for i, shortcut in ipairs(shortcuts) do
