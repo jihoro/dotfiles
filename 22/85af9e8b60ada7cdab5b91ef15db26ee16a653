@@ -1,0 +1,47 @@
+.config/nvim/after/ftplugin/typescript.lua
+  s_16d219ab5f70d3::t_28cab099c57dbd 1-6
+.config/nvim/init.lua
+  s_16d219ab5f70d3::t_7cb912d7c0c5bf 1-79
+.config/nvim/lazy-lock.json
+  s_16d219ab5f70d3::t_aab8c8cc44cb95 1-22
+.config/nvim/lua/config/lazy.lua
+  s_16d219ab5f70d3::t_48c5de7f308ff6 1-36
+.config/nvim/lua/config/plugins/completion.lua
+  s_16d219ab5f70d3::t_c4b5c5cb90aac1 1-121
+.config/nvim/lua/config/plugins/copilot.lua
+  s_16d219ab5f70d3::t_7f24da6cbb15d0 1-21
+.config/nvim/lua/config/plugins/git.lua
+  s_16d219ab5f70d3::t_689d48cb7e8d7d 1-9
+.config/nvim/lua/config/plugins/lsp.lua
+  s_16d219ab5f70d3::t_e03caa14c0c59c 1-157
+.config/nvim/lua/config/plugins/opencode.lua
+  s_16d219ab5f70d3::t_aa83846ba134e4 1-40
+.config/nvim/lua/config/plugins/telescope.lua
+  s_16d219ab5f70d3::t_d0b5d27ebdd896 1-67
+.config/nvim/lua/config/plugins/theme.lua
+  s_16d219ab5f70d3::t_34510b5caa2089 1-101
+.config/nvim/lua/config/plugins/tmux.lua
+  s_16d219ab5f70d3::t_e45cebb1d11db0 1-16
+.config/nvim/lua/config/plugins/toggleterm.lua
+  s_16d219ab5f70d3::t_bc35bb79f0c124 1-28
+.config/nvim/lua/config/plugins/treesitter.lua
+  s_16d219ab5f70d3::t_f3a677cb2106c6 1-86
+.config/nvim/lua/config/plugins/windsurf.lua
+  s_16d219ab5f70d3::t_ad9e8913317b37 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "2285af9e8b60ada7cdab5b91ef15db26ee16a653",
+  "prompts": {},
+  "sessions": {
+    "s_16d219ab5f70d3": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ed18a6a33ffeaMZ4D07OJm48xk",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jiho Ro <jihoandy@gmail.com>"
+    }
+  }
+}
