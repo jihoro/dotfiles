@@ -1,0 +1,23 @@
+.config/ghostty/themes/orng-dark
+  s_16d219ab5f70d3::t_6bdada02e76484 1-30
+.hammerspoon/init.lua
+  s_16d219ab5f70d3::t_4c563a7556e89c 5,7-9
+.tmux.conf
+  s_16d219ab5f70d3::t_a60d8d2df14ee8 51-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "9f93ad6741e5d5eee67187473bfc152b6ebd5f09",
+  "prompts": {},
+  "sessions": {
+    "s_16d219ab5f70d3": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ed18a6a33ffeaMZ4D07OJm48xk",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jiho Ro <jihoandy@gmail.com>"
+    }
+  }
+}
