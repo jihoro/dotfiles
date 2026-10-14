@@ -2,8 +2,8 @@
 prefix = "alt+o"
 help = "prefix+?"
 detach = "prefix+d"
-workspace_picker = ["prefix+f", "prefix+s"]
-goto = "prefix+w"
+workspace_picker = "prefix+s"
+goto = ["prefix+f", "prefix+w"]
 new_workspace = "prefix+shift+n"
 rename_workspace = "prefix+$"
 previous_workspace = "prefix+("
