@@ -1,4 +1,4 @@
-vim.lsp.set_log_level(vim.log.levels.OFF)
+vim.lsp.log.set_level(vim.log.levels.OFF)
 
 require("config.lazy")
 vim.opt.shiftwidth = 4

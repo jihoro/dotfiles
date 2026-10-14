@@ -18,7 +18,7 @@ Install these applications and command-line tools separately:
 - Hammerspoon
 - JetBrains Mono NL font
 - Neovim 0.11 or newer
-- `fzf`, `yazi`, `zoxide`, `bat`, `tmux`, `opencode`, and `rg`
+- `fzf`, `yazi`, `zoxide`, `bat`, `tmux`, `opencode`, `rg`, and `tree-sitter`
 
 Hammerspoon shortcuts also expect Google Chrome, Google Chat, and Cloudflare applications. Missing shortcut applications do not prevent setup.
 
@@ -34,7 +34,7 @@ Install [Homebrew](https://brew.sh/) if needed, then install applications and co
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install fzf yazi zoxide neovim bat tmux ripgrep opencode
+brew install fzf yazi zoxide neovim bat tmux ripgrep opencode tree-sitter-cli
 brew install --cask ghostty hammerspoon font-jetbrains-mono
 ```
 

@@ -127,7 +127,7 @@ if [[ "$install_plugins" == true ]]; then
 fi
 
 missing_commands=()
-for command_name in fzf yazi zoxide nvim bat tmux opencode rg make; do
+for command_name in fzf yazi zoxide nvim bat tmux opencode rg make tree-sitter; do
   if ! command -v "$command_name" >/dev/null 2>&1; then
     missing_commands+=("$command_name")
   fi

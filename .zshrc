@@ -34,5 +34,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 export PATH="$HOME/.opencode/bin:$PATH"
 
-source ~/gitstatus/gitstatus.prompt.zsh
+# Simple prompt (no git info; git status was slow in large repos)
+setopt no_prompt_bang prompt_percent prompt_subst
+PROMPT='%70F%n@%m%f %39F%~%f'$'\n''%F{%(?.76.196)}%#%f '
 export PATH="$HOME/.git-ai/bin:$PATH"
