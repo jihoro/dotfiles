@@ -4,7 +4,6 @@ shortcuts = {
     { "I", "Ghostty" },
     { "C", "Google Chat 1" },
     { "M", "Notes" },
-    { "D", "Cloudflare" },
 
     -- { "E", "Windsurf" },
 }
@@ -35,16 +34,43 @@ end
 --   ]])
 -- end)
 
--- Move by word with Option+B/F in text fields across apps.
-local function bindWordMovement(key, direction)
-    local function move()
-        hs.eventtap.keyStroke({ "alt" }, direction, 0)
+-- Keep terminal word shortcuts native; translate them in other apps.
+local terminalApps = {
+    ["com.mitchellh.ghostty"] = true,
+    ["com.apple.Terminal"] = true,
+    ["com.googlecode.iterm2"] = true,
+}
+local wordHotkeys = {}
+local function bindWordKey(mods, key, target)
+    local function send()
+        hs.eventtap.keyStroke({ "alt" }, target, 0)
     end
-    hs.hotkey.bind({ "alt" }, key, move, nil, move)
+    table.insert(wordHotkeys, hs.hotkey.new(mods, key, send, nil, send))
 end
 
-bindWordMovement("b", "left")
-bindWordMovement("f", "right")
+bindWordKey({ "alt" }, "b", "left")
+bindWordKey({ "alt" }, "f", "right")
+bindWordKey({ "ctrl" }, "w", "delete")
+bindWordKey({ "alt" }, "d", "forwarddelete")
+
+local function updateWordHotkeys(app)
+    local enabled = app and not terminalApps[app:bundleID()]
+    for _, hotkey in ipairs(wordHotkeys) do
+        if enabled then hotkey:enable() else hotkey:disable() end
+    end
+end
+
+-- Global reference keeps the application watcher alive.
+wordKeyWatcher = hs.application.watcher.new(function(_, event, app)
+    if event == hs.application.watcher.activated then
+        updateWordHotkeys(app)
+    end
+end):start()
+updateWordHotkeys(hs.application.frontmostApplication())
+
+hs.hotkey.bind({ "ctrl", "alt" }, "d", function()
+    hs.application.launchOrFocus("Cloudflare")
+end)
 
 -- move windows shortcuts
 hs.window.animationDuration = 0
