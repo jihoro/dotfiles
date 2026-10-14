@@ -1,6 +1,6 @@
 # Dotfiles
 
-Terminal configuration for Zsh, tmux, Ghostty, Powerlevel10k, and Hammerspoon.
+Terminal configuration for Zsh, tmux, Ghostty, Herdr, Powerlevel10k, and Hammerspoon.
 
 ## Setup
 

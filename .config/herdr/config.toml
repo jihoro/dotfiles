@@ -1,0 +1,4 @@
+[keys]
+prefix = "alt+o"
+detach = "prefix+d"
+goto = "prefix+f"

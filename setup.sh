@@ -109,6 +109,7 @@ copy_config ".tmux.conf"
 copy_config ".hammerspoon/init.lua"
 copy_config ".config/ghostty/config"
 copy_config ".config/ghostty/themes/orng-dark"
+copy_config ".config/herdr/config.toml"
 copy_config_tree ".config/nvim"
 
 if [[ "$install_plugins" == true ]]; then
