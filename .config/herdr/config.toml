@@ -31,3 +31,10 @@ resize_pane_left = ["prefix+ctrl+left", "prefix+alt+left"]
 resize_pane_down = ["prefix+ctrl+down", "prefix+alt+down"]
 resize_pane_up = ["prefix+ctrl+up", "prefix+alt+up"]
 resize_pane_right = ["prefix+ctrl+right", "prefix+alt+right"]
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[ui]
+mouse_capture = false
