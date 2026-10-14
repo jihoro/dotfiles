@@ -56,7 +56,7 @@ local function moveWindow(xFactor, yFactor, wFactor, hFactor)
     end
 end
 
-local modifiers = { "alt", "cmd" }
+local modifiers = { "alt", "ctrl" }
 
 hs.hotkey.bind(modifiers, "Left", moveWindow(0, 0, 0.5, 1))
 hs.hotkey.bind(modifiers, "Right", moveWindow(0.5, 0, 0.5, 1))
