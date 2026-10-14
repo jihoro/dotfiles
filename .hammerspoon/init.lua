@@ -35,6 +35,17 @@ end
 --   ]])
 -- end)
 
+-- Move by word with Option+B/F in text fields across apps.
+local function bindWordMovement(key, direction)
+    local function move()
+        hs.eventtap.keyStroke({ "alt" }, direction, 0)
+    end
+    hs.hotkey.bind({ "alt" }, key, move, nil, move)
+end
+
+bindWordMovement("b", "left")
+bindWordMovement("f", "right")
+
 -- move windows shortcuts
 hs.window.animationDuration = 0
 
